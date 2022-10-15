@@ -20,12 +20,12 @@ function renderHTML(data) {
     content += `
         <tr>
             <td>${i + 1}</td>
-            <td>${users.taiKhoan}</td>
-            <td>${users.matKhau}</td>
-            <td>${users.hoTen}</td>
+            <td>${users.account}</td>
+            <td>${users.password}</td>
+            <td>${users.fullname}</td>
             <td>${users.email}</td>
-            <td>${users.ngonNgu}</td>
-            <td>${users.loaiND}</td>
+            <td>${users.language}</td>
+            <td>${users.typename}</td>
             <td>
                 <button 
                     class="btn btn-info" 
@@ -215,7 +215,7 @@ function addUsers() {
 
   // Xử lý Promise
   servies
-    .addUsersApi(userMode)
+    .addUsersApi(userDemo)
     .then(function () {
       getListUsers();
     })
